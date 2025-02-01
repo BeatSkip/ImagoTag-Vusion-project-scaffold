@@ -1,1 +1,7 @@
-{}
+{
+    "files.associations": {
+        "board.h": "c",
+        "ax8052.h": "c",
+        "ax8052f143.h": "c"
+    }
+}

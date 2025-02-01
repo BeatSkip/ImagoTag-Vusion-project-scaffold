@@ -1,0 +1,29 @@
+{
+    "version": "1",
+    "configurations": [
+        {
+            "name": "release",
+            "displayName": "Release",
+            "description": "Build with optimizations.",
+            "properties": {
+                "qbs.defaultBuildVariant": "release"
+            }
+        },
+        {
+            "name": "debug",
+            "displayName": "Debug",
+            "description": "Build with debug information.",
+            "properties": {
+                "qbs.defaultBuildVariant": "debug"
+            }
+        },
+        {
+            "name": "profiling",
+            "displayName": "Profiling",
+            "description": "Build with optimizations and debug information.",
+            "properties": {
+                "qbs.defaultBuildVariant": "profiling"
+            }
+        }
+    ]
+}
