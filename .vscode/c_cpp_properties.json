@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "8051",
+            "defines": [
+                "__xdata",
+                "__sfr",
+                "__bit",
+                "__data",
+                "__idata",
+                "__code",
+                "__far",
+                "__huge",
+                "__near",
+                "__pdata"
+            ],
+            "forcedInclude": [
+                "C:/Program Files/SDCC/include/mcs51/lint.h"
+            ],
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3/8051/inc/**",
+                "C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3/8051/lib/libmf/include"
+            ],
+            "cStandard": "c99",
+            "intelliSenseMode": "gcc-x86",
+            "compilerPath": "",
+            "configurationProvider": "qbs-community.qbs-tools"
+        }
+    ],
+    "version": 4
+}

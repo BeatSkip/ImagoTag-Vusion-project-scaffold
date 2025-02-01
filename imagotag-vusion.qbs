@@ -12,6 +12,8 @@ CppApplication {
         condition: qbs.toolchain.contains("iar")
         cpp.includePaths: [
             "src",
+            cpp.toolchainInstallPath + "/../inc/",
+            cpp.toolchainInstallPath + "/../inc/clib",
             cpp.toolchainInstallPath + "/../lib/libmf/include/"]
         cpp.commonCompilerFlags: [
 			"--dptr=1,16,separate",
@@ -66,7 +68,8 @@ CppApplication {
     }
 
 
-    files: ["src/main.c", "src/hal.h", "src/board.h"]
+    files: [
+        "src/**.c", "src/**.h"]
 }
 
     

@@ -1,25 +1,24 @@
 #include <ax8052f143.h>
-#include <libmf.h>
 #include <libmftypes.h>
-#include <libmfuart.h>
+#include <libmf.h>
 #include <libmfuart0.h>
-#include "hal.h"
+#include "util.h"
 #include "board.h"
 
 
-//static void pwrmgmt_irq(void) __interrupt(INT_POWERMGMT)
-//{
-//    uint8_t pc = PCON;
-//
-//    if (!(pc & 0x80))
-//        return;
-//
-//    GPIOENABLE = 0;
-//    IE = EIE = E2IE = 0;
-//
-//    for (;;)
-//        PCON |= 0x01;
-//}
+static void pwrmgmt_irq(void) __interrupt(INT_POWERMGMT)
+{
+    uint8_t pc = PCON;
+
+    if (!(pc & 0x80))
+        return;
+
+    GPIOENABLE = 0;
+    IE = EIE = E2IE = 0;
+
+    for (;;)
+        PCON |= 0x01;
+}
 
 void main()
 {
@@ -29,9 +28,9 @@ void main()
     
     while (1)
     {
-        PIN_SET_LOW(LEDR_PORT, LEDR_PIN);
+        PIN_SET_LOW(LEDG_PORT, LEDG_PIN);
         delay(25000);
-        PIN_SET_HIGH(LEDR_PORT, LEDR_PIN);
+        PIN_SET_HIGH(LEDG_PORT, LEDG_PIN);
         delay(25000);
     }
 }
