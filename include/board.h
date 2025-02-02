@@ -14,6 +14,7 @@
 #include <ax8052f143.h>
 #include <libmftypes.h>
 
+
 //Board constants
 #define SYSCLK 26000000UL  // 26Mhz system clock
 
@@ -84,18 +85,6 @@
 void board_init(void);
 
 
-void board_init(void)
-{
-    // Set LED pins as output
-    PIN_SET_OUTPUT(LEDW_DIR, LEDW_PIN);
-    PIN_SET_OUTPUT(LEDR_DIR, LEDR_PIN);
-    PIN_SET_OUTPUT(LEDG_DIR, LEDG_PIN);
-    PIN_SET_OUTPUT(LEDB_DIR, LEDB_PIN);  
 
-    PIN_SET_LOW(LEDW_PORT, LEDW_PIN);
-    PIN_SET_LOW(LEDR_PORT, LEDR_PIN);
-    PIN_SET_LOW(LEDG_PORT, LEDG_PIN);
-    PIN_SET_LOW(LEDB_PORT, LEDB_PIN);  
-}
 
 #endif // BOARD_HEADER_H

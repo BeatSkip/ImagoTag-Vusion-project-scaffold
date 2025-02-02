@@ -1,17 +1,5 @@
 {
     "files.associations": {
-        "board.h": "c",
-        "ax8052.h": "c",
-        "ax8052f143.h": "c",
-        "ioax8052f143.h": "c",
-        "iar_check_symbols.h": "c"
-    },
-    "C_Cpp.default.defines": [],
-    "C_Cpp.default.intelliSenseMode": "gcc-x86",
-    "C_Cpp.default.forcedInclude": [
-        "C:\\Program Files\\SDCC\\include\\mcs51\\lint.h"
-    ],
-    "C_Cpp.default.systemIncludePath": [
-        "C:\\Program Files\\SDCC\\include\\mcs51"
-    ]
+        "ax8052f143.h": "c"
+    }
 }

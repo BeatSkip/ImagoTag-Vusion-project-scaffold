@@ -9,6 +9,8 @@
 /obj
 /out
 /build
+/iar8051
+/settings
 
 # eide template
 *.ept
