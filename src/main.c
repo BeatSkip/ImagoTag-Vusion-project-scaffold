@@ -1,3 +1,5 @@
+
+#include <ax8052.h>
 #include <ax8052f143.h>
 #include <libmftypes.h>
 #include <libmf.h>
@@ -6,7 +8,7 @@
 #include "board.h"
 
 
-static void pwrmgmt_irq(void) __interrupt(INT_POWERMGMT)
+static void pwrmgmt_irq(void) //__interrupt(INT_POWERMGMT)
 {
     uint8_t pc = PCON;
 

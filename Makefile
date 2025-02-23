@@ -20,8 +20,8 @@ PRJ_OBJECTS := $(addprefix $(OBJDIR)/, $(PRJ_SOURCE:.c=.rel))
 
 # ------------------------------------------------------
 # Compiler/Linker Settings
-CC          = sdcc.exe
-AS          = sdas8051.exe
+CC          = "C:\Program Files\SDCC\bin\sdcc.exe"
+AS          = "C:\Program Files\SDCC\bin\sdas8051.exe"
 MODEL       = small
 
 # Include paths (from build log)
@@ -52,8 +52,9 @@ LIB_PATHS = -L"C:/Program Files/SDCC/lib" \
 LIBS        = -llibmf -llibaxdvk2
 
 # Compiler flags
-COMMON_FLAGS = -mmcs51 --verbose --debug
+COMMON_FLAGS = -mmcs51 --verbose --debug -DBUILD
 CFLAGS      = $(COMMON_FLAGS) --model-$(MODEL) $(INCLUDE_PATHS)
+CPPFLAGS    = $(COMMON_FLAGS) --model-$(MODEL) $(INCLUDE_PATHS)
 
 # Linker flags
 LDFLAGS     = $(COMMON_FLAGS) $(LIB_PATHS) $(LIBS) \
