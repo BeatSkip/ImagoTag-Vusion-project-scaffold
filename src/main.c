@@ -29,9 +29,9 @@ void main()
     
     while (1)
     {
-        PIN_SET_LOW(LEDR_PORT, LEDR_PIN);
+        PIN_SET_LOW(LEDG_PORT, LEDG_PIN);
         delay(25000);
-        PIN_SET_HIGH(LEDR_PORT, LEDR_PIN);
+        PIN_SET_HIGH(LEDG_PORT, LEDG_PIN);
         delay(25000);
     }
 }

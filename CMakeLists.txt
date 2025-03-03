@@ -8,6 +8,8 @@ add_executable(imagotagScaffold
   src/board.h
 )
 
+set(CMAKE_EXECUTABLE_SUFFIX "")
+
 # Include directories
 target_include_directories(imagotagScaffold PRIVATE
   src
@@ -18,6 +20,7 @@ target_include_directories(imagotagScaffold PRIVATE
 set_target_properties(imagotagScaffold PROPERTIES
   XCL "${TOOLKIT_DIR}/config/devices/On Semiconductor/lnk51ew_AX8052F143.xcl"
 )
+
 
 # Set the compiler flags for the "imagotagScaffold" target
 target_compile_options(imagotagScaffold PRIVATE
@@ -34,6 +37,8 @@ target_compile_options(imagotagScaffold PRIVATE
     -D__CALLING_CONVENTION__=2
   >
 )
+
+
 
 # Set the linker flags for the target
 target_link_options(imagotagScaffold PRIVATE
@@ -59,7 +64,7 @@ target_link_options(imagotagScaffold PRIVATE
   -xm
   -xs
   -xo
-  -Ointel-standard
+  "SHELL:-Ointel-standard=.hex"
   -f $<TARGET_PROPERTY:XCL>
 )
 
