@@ -8,8 +8,8 @@
 #include <libmfuart1.h>
 
 //Choose LOWFREQ_QUARZ or LOWFREQ_RC as source for RTC clock
-#define LOWFREQ_QUARZ
-//#define LOWFREQ_RC
+//#define LOWFREQ_QUARZ
+#define LOWFREQ_RC
 
 #define HIGH (1)
 #define LOW (0)
